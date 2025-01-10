@@ -2,6 +2,7 @@ import { client } from '@/sanity/lib/client';
 import Image from 'next/image';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import CommentForm from '@/app/components/Submit';
 
 export default async function BlogPage({ params }: { params: Promise<{ blog: string }> }) {
     // Resolve the `params` promise
@@ -42,6 +43,7 @@ export default async function BlogPage({ params }: { params: Promise<{ blog: str
                     <p className="text-lg mt-2 hover:text-green-600"><b>BLOG:</b>{blogs?.description}</p>
                     <p className="hover:text-green-600"><b>CONCLUSION:</b>{blogs?.conclusion}</p>
                 </div>
+            <CommentForm/>
             </div>
             <Footer />
         </>
