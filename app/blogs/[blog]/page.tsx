@@ -8,7 +8,7 @@ interface Props {
         blog: string;
     };
 }
-export default async function page({ params }: Props) {
+export default async function page({ params }: { params: { blog: string } }) {
     const data = await client.fetch(`*[_type == "blogs" && slug.current == "${params.blog}"]{
     "imageUrl": image1.asset->url,
     "slug": slug.current,
