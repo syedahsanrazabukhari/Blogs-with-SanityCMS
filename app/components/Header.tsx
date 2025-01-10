@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 export default function Header() {
     return (
         <>
@@ -12,9 +13,9 @@ export default function Header() {
                     width={25}
                      height={25}
                      className="sm:hidden"/>
-                    <ul className="max-sm:hidden text-black flex gap-x-5 text-[19px]  ">
+                    <ul className="max-sm:hidden text-black flex gap-x-5 text-[21px]  ">
                         <li>About</li>
-                        <li>Blogs</li>
+                       <Link href="/blogs"> <li>Blogs</li></Link>
                         <li>Contact</li>
                     </ul>
                     <button className= "max-sm:hidden text-black py-2 px-4 bg-green-700 rounded-lg hover:bg-green-600">SignUp</button>
