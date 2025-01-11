@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Home from "../page";
 
 export default function Header() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Header() {
             <header>
                 <div className="p-1 bg-black text-white text-center">Blogs website</div>
                 <div className="p-3 text-white flex items-center justify-between">
-                    <h1 className="text-[30px] text-green-700 font-extrabold">BLOGNEST</h1>
+                    <Link href="/"><h1 className="text-[30px] text-green-700 font-extrabold">BLOGNEST</h1></Link>
 
                     {/* Hamburger Icon */}
                     <Image
